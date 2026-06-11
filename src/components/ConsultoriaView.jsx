@@ -75,7 +75,7 @@ export default function ConsultoriaView({ setSetupOpen }) {
         </div>
         <div className="mcp-metric-item">
           <span className="pulse-dot orange"></span>
-          <span>Setup Único: <strong>R$ 499</strong> (Sem mensalidade inicial)</span>
+          <span>Setup Único: <strong>R$ 4.900</strong> (Sem mensalidade inicial)</span>
         </div>
       </div>
 
@@ -144,7 +144,7 @@ export default function ConsultoriaView({ setSetupOpen }) {
           <div className="jornada-card">
             <div className="jornada-num">02</div>
             <h3>CHECKOUT E CADASTRO</h3>
-            <p>Realize o pagamento único da taxa de Setup (R$ 499,00) via Pix e crie sua senha de acesso ao painel corporativo.</p>
+            <p>Realize o pagamento único da taxa de Setup (R$ 4.900,00) via Pix e crie sua senha de acesso ao painel corporativo.</p>
           </div>
           <div className="jornada-card">
             <div className="jornada-num">03</div>

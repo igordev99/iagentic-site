@@ -279,7 +279,7 @@ export default function AgentSetupModal({ isOpen, onClose }) {
         {step === 4 && (
           <div className="setup-step">
             <h3>Conclua seu Cadastro</h3>
-            <p className="setup-step-desc">Defina sua senha de acesso ao painel e efetue o pagamento da taxa de setup de R$ 499,00.</p>
+            <p className="setup-step-desc">Defina sua senha de acesso ao painel e efetue o pagamento da taxa de setup de R$ 4.900,00.</p>
             
             <form onSubmit={handlePaymentSubmit} className="auth-form" style={{ gap: '20px' }}>
               <div className="form-group">
@@ -312,7 +312,7 @@ export default function AgentSetupModal({ isOpen, onClose }) {
                 </div>
               ) : (
                 <div style={{ background: '#0a0a0a', padding: '16px', borderRadius: '12px', border: '1px solid var(--border)', fontSize: '13px', color: 'var(--muted)' }}>
-                  Cartão de crédito selecionado. O débito de R$ 499,00 será processado com segurança via Stripe.
+                  Cartão de crédito selecionado. O débito de R$ 4.900,00 será processado com segurança via Stripe.
                 </div>
               )}
 

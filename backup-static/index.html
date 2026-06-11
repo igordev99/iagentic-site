@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iAgentic - Plataforma de Automação com IA</title>
+    <meta name="description" content="Escale mais rápido e trabalhe de forma mais inteligente com soluções de IA personalizadas para transformar suas operações e impulsionar o crescimento.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="iAgentic Logo" style="height:44px;object-fit:contain;">
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <a href="#features">Recursos</a>
+                <a href="#services">Serviços</a>
+                <a href="#about">Sobre</a>
+                <a href="#team">Equipe</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <a href="#loginModal" class="btn-get-started">Acesso Portal <span>&rarr;</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobile-nav">
+            <a href="#features">Recursos</a>
+            <a href="#services">Serviços</a>
+            <a href="#about">Sobre</a>
+            <a href="#team">Equipe</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contato</a>
+            <a href="#loginModal" class="btn-cyan mobile-cta">Acesso Portal</a>
+        </nav>
+    </header>
+
+    <!-- ====== HERO ====== -->
+    <section id="hero">
+        <div class="hero-glow-cyan"></div>
+        <div class="hero-glow-purple"></div>
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cyan)"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></svg>
+                    Squad de Alta Performance com IA
+                </div>
+                <h1>Monte seu <em>Squad de IA</em>.<br>Trabalho 24/7 sem limites.</h1>
+                <p class="hero-sub">Esqueça os gargalos humanos. Tenha um departamento inteiro trabalhando para você 24 horas por dia: atendimento ao cliente no WhatsApp que fecha vendas, funcionários virtuais para suas redes sociais e muito mais. Tudo funcionando automaticamente, sem precisar supervisão.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn-cyan">Montar meu Squad <span>&rarr;</span></a>
+                    <a href="#about" class="btn-dark">Ver Plataforma</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== PARTNERS MARQUEE ====== -->
+    <section id="partners">
+        <div class="container">
+            <p class="partners-label">Desenvolvido com os modelos de Inteligência Artificial mais avançados do mundo.</p>
+        </div>
+        <div class="marquee-wrap">
+            <div class="marquee-track">
+                <span class="partner">✦ GEMINI</span>
+                <span class="partner">✦ CLAUDE</span>
+                <span class="partner">✦ DEEPSEEK</span>
+                <span class="partner">✦ OPENAI</span>
+                <span class="partner">✦ GROK</span>
+                <span class="partner">✦ MINIMAX</span>
+                <span class="partner">✦ MISTRAL</span>
+                <span class="partner">✦ LLAMA</span>
+                <span class="partner">✦ NEMOTRON</span>
+
+                <!-- Duplicate for seamless scroll -->
+                <span class="partner">✦ GEMINI</span>
+                <span class="partner">✦ CLAUDE</span>
+                <span class="partner">✦ DEEPSEEK</span>
+                <span class="partner">✦ OPENAI</span>
+                <span class="partner">✦ GROK</span>
+                <span class="partner">✦ MINIMAX</span>
+                <span class="partner">✦ MISTRAL</span>
+                <span class="partner">✦ LLAMA</span>
+                <span class="partner">✦ NEMOTRON</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== SERVICES ====== -->
+    <section id="services">
+        <div class="glow-blob glow-purple-left"></div>
+        <div class="container">
+            <div class="services-layout">
+                <div class="services-left">
+                    <p class="label-orange">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                        Serviços Inteligentes, <em>Criados com IA</em>
+                    </p>
+                    <p class="services-desc">Criamos as ferramentas que nós mesmos wanted usar. Simplifique sua vida digital com resultados rápidos e tecnologia que realmente funciona.</p>
+                    <div class="carousel-arrows">
+                        <button class="arrow-btn" id="prev-svc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+                        <button class="arrow-btn" id="next-svc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                    </div>
+                </div>
+                <div class="services-right" id="svc-cards">
+                    <div class="svc-card">
+                        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="10" x="3" y="11" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" x2="8" y1="16" y2="16"/><line x1="16" x2="16" y1="16" y2="16"/></svg></div>
+                        <h3>Hospedagem de Elite</h3>
+                        <p>Servidores ultra-rápidos em 12 países. Seu site e automações funcionando 99.99% do tempo, sem cair nunca.</p>
+                        <a href="#contact" class="btn-sm">Começar</a>
+                    </div>
+                    <div class="svc-card">
+                        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><circle cx="12" cy="12" r="4"/></svg></div>
+                        <h3>Agentes de IA</h3>
+                        <p>Funcionários virtuais que trabalham sozinhos, aprendem com o tempo e fazem seu negócio crescer automaticamente.</p>
+                        <a href="#contact" class="btn-sm">Começar</a>
+                    </div>
+                    <div class="svc-card svc-hidden">
+                        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></svg></div>
+                        <h3>Webmail Pro</h3>
+                        <p>Plataforma de colaboração simples e ultra-rápida. Comunicação empresarial eficiente em um só lugar.</p>
+                        <a href="#contact" class="btn-sm">Começar</a>
+                    </div>
+                    <div class="svc-card svc-hidden">
+                        <div class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg></div>
+                        <h3>Segurança Ativa</h3>
+                        <p>Proteção 24 horas contra hackers e ataques maliciosos. Sua empresa sempre segura e protegida.</p>
+                        <a href="#contact" class="btn-sm">Começar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section id="about">
+        <div class="container">
+            <div class="about-text">
+                <h2>A sua parceira em Tecnologia e Infraestrutura Elite</h2>
+                <p>Nós acreditamos que a tecnologia não deve ser uma barreira, mas sim o motor principal que impulsiona seu negócio. Desenvolvemos soluções completas para quem quer grow sem preocupações.</p>
+                <p>Desde servidores rápidos e protegidos contra ataques até chatbots inteligentes que vendem e atendimento automático 24h.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== STATS (MISSING — NOW ADDED) ====== -->
+    <section id="stats">
+        <div class="container">
+            <h2 class="stats-title">Nada grandioso é feito sozinho</h2>
+            <p class="stats-subtitle">Nosso compromisso com resultados excepcionais para nossos clientes começa com uma equipe dedicada e apaixonada.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-val"><span class="stat-number" data-count="24">0</span><span class="stat-plus">+</span></div>
+                    <p class="stat-label">Confiabilidade</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val"><span class="stat-number-text">100TB</span></div>
+                    <p class="stat-label">De dados</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val"><span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span></div>
+                    <p class="stat-label">Negócios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FEATURES (Workflow Automation) ====== -->
+    <section id="features">
+        <div class="container">
+            <p class="label-orange">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                Automação de Fluxo de Trabalho
+            </p>
+            <div class="bento-row bento-row-workflow">
+                <div class="bento-card bento-card-img">
+                    <div class="bento-gradient gradient-iagentic-1"></div>
+                    <div class="bento-card-info"><h3>Monitoramento 24/7</h3><p>Nossos servidores monitoram seu site o tempo todo. Se algo der errado, corrigimos antes mesmo de você perceber.</p></div>
+                    <button class="bento-next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+                <div class="bento-card-text-pair">
+                    <h3 class="workflow-heading">Automação de Fluxo de Trabalho <em>Simplificada!</em></h3>
+                    <div class="workflow-items">
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted)"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div>
+                            <h4>Funcionários Virtuais</h4>
+                            <p>Nossos robôs fazem as tarefas chatas e repetitivas no lugar deles. entry de dados, responder e-mails, approvals - tudo automático.</p>
+                        </div>
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color:var(--muted)"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div>
+                            <h4>Milhares de Automações Prontas</h4>
+                            <p>Temos automações prontas para quase tudo. Configure uma vez e ela trabalha para você para sempre!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="label-orange">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                Resolva Suas Tarefas Diárias
+            </p>
+            <div class="bento-row">
+                <div class="bento-card-text-pair">
+                    <h3 class="workflow-heading">Da organização da sua agenda à redação de e-mails</h3>
+                    <div class="workflow-items">
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
+                            <h4>Resumos</h4>
+                            <p>Gere resumos automáticos de reuniões, relatórios e documentos para economizar tempo e manter o foco.</p>
+                        </div>
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg></div>
+                            <h4>Planejamento</h4>
+                            <p>Organize sua agenda de forma inteligente com sugestões automáticas de horários e priorização de tarefas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bento-card bento-card-img">
+                    <div class="bento-gradient gradient-iagentic-2"></div>
+                    <div class="bento-card-info"><h3>Crescimento Automático</h3><p>Quando seu negócio cresce, seus sistemas crescem junto. Sem você precisar configurar nada.</p></div>
+                    <button class="bento-next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+            </div>
+
+            <p class="label-orange">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                Impulsione Suas Vendas Rapidamente!
+            </p>
+            <div class="bento-row">
+                <div class="bento-card bento-card-img">
+                    <div class="bento-gradient gradient-iagentic-3"></div>
+                    <div class="bento-card-info"><h3>Funciona com Suas Ferramentas</h3><p>Conectamos tudo o que você já usa. Seu CRM, WhatsApp, e-mail - tudo trabalhando junto.</p></div>
+                    <button class="bento-next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+                </div>
+                <div class="bento-card-text-pair">
+                    <h3 class="workflow-heading">Use ferramentas de IA para gerar leads.</h3>
+                    <div class="workflow-items">
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                            <h4>Clientes Automáticos</h4>
+                            <p>Nosso robô conversa com interessados, descobre o que eles precisam e transforma em clientes para você.</p>
+                        </div>
+                        <div class="workflow-item">
+                            <div class="workflow-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg></div>
+                            <h4>Cria Conteúdo</h4>
+                            <p>Posts para Instagram, textos para blog, descrições de produtos - tudo gerado automaticamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== INTEGRATIONS ====== -->
+    <section id="integrations">
+        <div class="container">
+            <h2 class="big-heading">Todos os recursos em um só lugar</h2>
+            <div class="integrations-split">
+                <div class="integrations-left">
+                    <h2>Conexões sem esforço em todas as plataformas</h2>
+                </div>
+                <div class="integrations-right">
+                    <p>Conectamos tudo o que você usa. WhatsApp, Instagram, e-mail, CRM - tudo trabalhando junto, sem complicação.</p>
+                    <a href="#contact" class="btn-sm">Começar</a>
+                </div>
+            </div>
+            <div class="orbit-area">
+                <div class="orbit-ring orbit-ring-1"></div>
+                <div class="orbit-ring orbit-ring-2"></div>
+                <div class="orbit-ring orbit-ring-3"></div>
+                <div class="orbit-dot orbit-dot-1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg></div>
+                <div class="orbit-dot orbit-dot-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <div class="orbit-dot orbit-dot-3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
+                <div class="orbit-dot orbit-dot-4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+                <div class="orbit-dot orbit-dot-5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></div>
+                <div class="orbit-dot orbit-dot-6"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 8h12"/><path d="M18.3 17.7a2.5 2.5 0 0 1-3.16 3.83 2.53 2.53 0 0 1-2.64 0A2.5 2.5 0 0 1 9.3 17.7"/><circle cx="12" cy="15" r="2"/></svg></div>
+                <div class="orbit-center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== BENEFITS GRID (MISSING — NOW ADDED) ====== -->
+    <section id="benefits">
+        <div class="container">
+            <h2 class="section-center-title" style="margin-bottom:60px;">Tudo que Nossos Agentes de IA Podem Fazer</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"/></svg></div>
+                    <h4>Atendimento WhatsApp com IA</h4>
+                    <p>Agentes autônomos que fecham vendas, marcam reuniões e tiram dúvidas 24/7 direto no principal aplicativo do Brasil.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h4>Qualificação de Leads Automática</h4>
+                    <p>Nossa inteligência artificial conversa com curiosos e converte-os em clientes qualificados direto no seu CRM.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg></div>
+                    <h4>Presente em Todos os Lugares</h4>
+                    <p>Mesmo agente inteligente funcionando no Instagram, no seu site, no e-mail e no WhatsApp. Uma só "mente" conversando em todos os lugares.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/></svg></div>
+                    <h4>Hospedagem Própria Ultra-Rápida</h4>
+                    <p>Nossos servidores são nossos - não dependemos de terceiros. Seu site e automações rodam na velocidade máxima, sem cair nunca.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg></div>
+                    <h4>Trabalhos de Escritório Automáticos</h4>
+                    <p>A IA lê contratos, organiza e-mails, lança notas fiscais. Sua equipe foca no que importa: fazer o negócio crescer.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/></svg></div>
+                    <h4>Cria Conteúdo Automaticamente</h4>
+                    <p>Nossos robôs criam posts para redes sociais, descrições de produtos e textos de venda que realmente convertem.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <h4>Recrutamento Inteligente</h4>
+                    <p>Robô que analisa currículos, faz entrevistas iniciais por texto e indica os melhores candidatos. Sem viés, sem desperdício de tempo.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                    <h4>Bem-vindo Automático</h4>
+                    <p>Robô que envia tutoriais, dá boas-vindas no WhatsApp e ensina seu novo cliente a usar seu produto. Pronto para usar em minutos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                    <h4>Agendamento Automático</h4>
+                    <p>Robô que conversa com seu cliente, descobre o melhor horário e marca a reunião no seu calendário. Tudo sozinho.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                    <h4>Vende para o Mundo</h4>
+                    <p>Atende clientes em qualquer idioma. O robô traduz e responde em tempo real. Fronteiras não são mais problema.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></div>
+                    <h4>Loja Virtual Automática</h4>
+                    <p>Robô que recupera clientes que não pagaram, aborda quem abandonou carrinho e sugere produtos para aumentar vendas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+                    <h4>Relatórios Automáticos</h4>
+                    <p>Robô que junta tudo: vendas, interações, visitas. Toda noite você recebe no celular um resumo do que importa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== LOGOS MARQUEE ====== -->
+    <section id="logos-section">
+        <div class="logos-marquee">
+            <div class="logos-track">
+                <div class="logo-pill">✦ GEMINI</div>
+                <div class="logo-pill">✦ CLAUDE</div>
+                <div class="logo-pill">✦ DEEPSEEK</div>
+                <div class="logo-pill">✦ OPENAI</div>
+                <div class="logo-pill">✦ GROK</div>
+                <div class="logo-pill">✦ MINIMAX</div>
+                <div class="logo-pill">✦ LLAMA</div>
+                <div class="logo-pill">✦ MISTRAL</div>
+                <div class="logo-pill">✦ NEMOTRON</div>
+                <div class="logo-pill">✦ GEMINI</div>
+                <div class="logo-pill">✦ CLAUDE</div>
+                <div class="logo-pill">✦ DEEPSEEK</div>
+                <div class="logo-pill">✦ OPENAI</div>
+                <div class="logo-pill">✦ GROK</div>
+                <div class="logo-pill">MINIMAX</div>
+                <div class="logo-pill">✦ LLAMA</div>
+                <div class="logo-pill">MISTRAL</div>
+                <div class="logo-pill">NEMOTRON</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TEAM ====== -->
+    <section id="team">
+        <div class="container">
+            <h2 class="section-center-title">Conheça os Membros da Equipe</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo" style="background-image:url('images/everton.jpg')"></div>
+                    <h3>Everton Rocha</h3>
+                    <p>Comercial</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo" style="background-image:url('images/Igor.jpg')"></div>
+                    <h3>Igor Oliveira</h3>
+                    <p>Especialista em Desenvolvimento</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo" style="background-image:url('images/Gustavo.jpg'); background-size: 85%; background-position: center 10%; background-repeat: no-repeat; background-color: #fff;"></div>
+                    <h3>Gustavo Fernandes</h3>
+                    <p>Gestor de Projetos</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo" style="background-image:url('images/samea.jpg')"></div>
+                    <h3>Samea Fernandes</h3>
+                    <p>Gestora Financeira</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-center-title">Conheça seu Novo Squad</h2>
+            <p style="text-align:center;color:var(--muted);max-width:600px;margin: -30px auto 60px auto;font-size:18px;">Deixe a contratação tradicional no passado. Escale sua empresa com agentes especialistas de Inteligência Artificial trabalhando simultaneamente.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div style="font-size:12px;letter-spacing:1px;font-weight:700;color:var(--cyan);margin-bottom:16px;text-transform:uppercase;">✦ AGENTE #01</div>
+                    <p>"Eu sou treinado para ler e-mails de prospectos, qualificar leads frios e agendar reuniões no seu calendário automaticamente pelo WhatsApp."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar" style="background:linear-gradient(135deg,#005c29,var(--cyan))"></div>
+                        <div><h4>Vendas</h4><span>Foco emConverter interessados em clientes</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="font-size:12px;letter-spacing:1px;font-weight:700;color:var(--cyan);margin-bottom:16px;text-transform:uppercase;">✦ AGENTE #02</div>
+                    <p>"Fico monitorando seu Instagram e WhatsApp. Resolvo dúvidas rápidas com humanização e fecho carrinhos abandonados 24/7."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar" style="background:linear-gradient(135deg,#111,#444)"></div>
+                        <div><h4>Atendimento</h4><span>Foco em Satisfazer e ReterClientes</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="font-size:12px;letter-spacing:1px;font-weight:700;color:var(--cyan);margin-bottom:16px;text-transform:uppercase;">✦ AGENTE #03</div>
+                    <p>"Pesquiso o mercado, crio textos persuasivos e preparo imagens para suas redes sociais alavancarem resultados."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar" style="background:linear-gradient(135deg,#ff6b35,#f7c948)"></div>
+                        <div><h4>Social Media</h4><span>Foco em Marketing & Viralização</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FAQ ====== -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-center-title">Tem Dúvidas? Nós Temos Respostas</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q"><span class="faq-num">1</span>O que dá para automatizar?<span class="faq-plus">+</span></button>
+                    <div class="faq-a"><p>Quase tudo: responder clientes no WhatsApp, postar nas redes sociais, enviar e-mails, organizar dados, gerar orçamentos, contratar funcionários e muito mais.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span class="faq-num">2</span>Preciso ter conhecimento técnico?<span class="faq-plus">+</span></button>
+                    <div class="faq-a"><p>Não é necessário conhecimento técnico! Nossa plataforma é intuitiva e fácil de usar. Cuidamos de toda a configuração técnica e oferecemos suporte contínuo.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span class="faq-num">3</span>Funciona com o que eu já uso?<span class="faq-plus">+</span></button>
+                    <div class="faq-a"><p>Sim! Conectamos com tudo o que você já usa: WhatsApp Business, Instagram, Gmail, Outlook, HubSpot, Salesforce, Notion, Slack e mais de 100 outras ferramentas.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span class="faq-num">4</span>Quanto tempo leva para configurar?<span class="faq-plus">+</span></button>
+                    <div class="faq-a"><p>A maioria das automações é configurada em 1-2 semanas. Soluções empresariais complexas podem levar de 4 a 6 semanas dependendo do escopo.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q"><span class="faq-num">5</span>É seguro? Minha dados ficam protegidos?<span class="faq-plus">+</span></button>
+                    <div class="faq-a"><p>Sim, segurança é prioridade número um. Seguimos a LGPD (Lei de Proteção de Dados) e os padrões mais rigorosos do mercado. Seus dados ficam protegidos.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section id="cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Essa é a sua próxima escala</h2>
+                <p>Pronto para elevar sua infraestrutura digital para o próximo nível? Nossa equipe desenha sua solução sob medida.</p>
+                <div class="cta-btns">
+                    <a href="#contact" class="btn-cyan">Começar Agora <span>&rarr;</span></a>
+                    <a href="#about" class="btn-dark">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-center-title">Entre em Contato</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullname">Seu Nome</label>
+                        <input type="text" id="fullname" placeholder="Nome Sobrenome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" placeholder="voce@empresa.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Assunto / Necessidade</label>
+                    <select id="subject" class="styled-select" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="Hospedagem Premium">Hospedagem Premium</option>
+                        <option value="Infraestrutura de Email">Infraestrutura de Email</option>
+                        <option value="Agentes de IA">Agentes de IA</option>
+                        <option value="Parceria White-Label">Parceria White-Label</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" rows="5" placeholder="Como podemos acelerar seu negócio?" required></textarea>
+                </div>
+                <button type="submit" class="btn-cyan btn-full">Enviar Solicitação</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="images/logo.png" alt="iAgentic Logo" style="height:44px;object-fit:contain;">
+                    </a>
+                    <p class="footer-tagline">Novo Aliado em Automação de IA</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <a href="#features">Recursos</a>
+                        <a href="#services">Serviços</a>
+                        <a href="#about">Sobre</a>
+                        <a href="#team">Equipe</a>
+                    </div>
+                    <div class="footer-col">
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contato</a>
+                        <a href="#contact">Agende uma Consultoria</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 iAgentic. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== LOGIN MODAL ====== -->
+    <div id="loginModal" class="modal">
+        <div class="modal-wrapper">
+            <a href="#" class="modal-close" style="top:-40px; right:0;" onclick="window.location.hash=''; return false;">&times;</a>
+            
+            <div class="auth-header">
+                <img src="images/logo.png" alt="iAgentic" style="height: 32px; object-fit: contain;">
+                <span style="font-size: 24px; font-weight: 700; letter-spacing: -0.5px;"></span>
+            </div>
+
+            <div class="auth-card">
+                <!-- LOGIN VIEW -->
+                <div id="auth-login-view">
+                    <h2>Bem-vindo de volta</h2>
+                    <p class="auth-sub">Entre com suas credenciais para gerenciar seu painel.</p>
+                    <form class="auth-form" onsubmit="event.preventDefault()">
+                        <div class="auth-group">
+                            <label>E-MAIL</label>
+                            <div class="input-icon-wrap">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                <input type="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="auth-group">
+                            <label>SENHA</label>
+                            <div class="input-icon-wrap">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <input type="password" placeholder="••••••••" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-auth">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                            Acessar Painel
+                        </button>
+                    </form>
+                    <div class="auth-switch">Não tem uma conta? <a href="javascript:void(0)" onclick="toggleAuthView('register')">Cadastre-se agora</a></div>
+                </div>
+
+                <!-- REGISTER VIEW -->
+                <div id="auth-register-view" style="display:none;">
+                    <h2>Criar nova conta</h2>
+                    <p class="auth-sub">Comece a gerenciar sua infraestrutura hoje.</p>
+                    <form class="auth-form" onsubmit="event.preventDefault()">
+                        <div class="auth-group">
+                            <label>E-MAIL</label>
+                            <div class="input-icon-wrap">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                <input type="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        <div class="auth-group">
+                            <label>SENHA</label>
+                            <div class="input-icon-wrap">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <input type="password" placeholder="••••••••" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-auth">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                            Criar Conta
+                        </button>
+                    </form>
+                    <div class="auth-switch">Já tem uma conta? <a href="javascript:void(0)" onclick="toggleAuthView('login')">Faça login</a></div>
+                </div>
+            </div>
+            
+            <div class="auth-footer">PROTECTED BY SUPABASE AUTH</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAuthView(view) {
+            document.getElementById('auth-login-view').style.display = view === 'login' ? 'block' : 'none';
+            document.getElementById('auth-register-view').style.display = view === 'register' ? 'block' : 'none';
+        }
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -2,8 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 const CLIENTS_DATA = [
   { 
-    id: 1, name: "Sanville Contabilidade", agents: 11, reqs: 1500, uptime: 99.99, fte: 0.8,
-    eps: 25,
+    id: 1, name: "Ideal Company", agents: 8, reqs: 850, uptime: 100.0, fte: 0.75, eps: 12,
+    robots: [
+      { name: "Qualificador SDR 001", model: "Claude 3.5 Sonnet", baseTasks: 4500, baseRoi: 12500 },
+      { name: "Suporte Técnico 002", model: "Gemini 1.5 Flash", baseTasks: 18200, baseRoi: 8400 }
+    ]
+  },
+  { 
+    id: 2, name: "Sanville Contabilidade", agents: 11, reqs: 1500, uptime: 99.99, fte: 0.8, eps: 25,
     robots: [
       { name: "Planejador Previdenciário 001", model: "Claude 3.5 Sonnet", baseTasks: 3420, baseRoi: 18900 },
       { name: "Emissor de NFS-e 002", model: "Gemini 1.5 Flash", baseTasks: 11200, baseRoi: 14300 },
@@ -11,42 +17,84 @@ const CLIENTS_DATA = [
     ]
   },
   { 
-    id: 2, name: "Ideal Company", agents: 8, reqs: 850, uptime: 100.0, fte: 0.75,
-    eps: 12,
-    robots: [
-      { name: "Qualificador SDR 001", model: "Claude 3.5 Sonnet", baseTasks: 4500, baseRoi: 12500 },
-      { name: "Suporte Técnico 002", model: "Gemini 1.5 Flash", baseTasks: 18200, baseRoi: 8400 }
-    ]
-  },
-  { 
-    id: 3, name: "Uphold Contabilidade", agents: 150, reqs: 26800, uptime: 99.97, fte: 0.85,
-    eps: 184,
+    id: 3, name: "Uphold Contabilidade", agents: 150, reqs: 26800, uptime: 99.97, fte: 0.85, eps: 184,
     robots: [
       { name: "Emissor de NFS-e 001", model: "Claude 3.5 Sonnet", baseTasks: 124000, baseRoi: 540000 },
       { name: "Conciliador Bancário 002", model: "Gemini 1.5 Flash", baseTasks: 852000, baseRoi: 420000 },
-      { name: "Leitor de NFe / Entrada 003", model: "Llama 3 8B", baseTasks: 421000, baseRoi: 380000 }
+      { name: "Leitor de NFe 003", model: "Llama 3 8B", baseTasks: 421000, baseRoi: 380000 }
     ]
   },
   { 
-    id: 4, name: "Contabiliza Descomplica", agents: 6, reqs: 480, uptime: 99.98, fte: 0.7,
-    eps: 8,
+    id: 4, name: "Zac Contábil", agents: 10, reqs: 1150, uptime: 99.99, fte: 0.75, eps: 18,
+    robots: [
+      { name: "Agendador Cal.com 001", model: "Claude 3.5 Sonnet", baseTasks: 1250, baseRoi: 6200 },
+      { name: "Envio de Boleto WhatsApp 002", model: "Gemini 1.5 Flash", baseTasks: 9400, baseRoi: 11000 }
+    ]
+  },
+  {
+    id: 5, name: "Nexos Advocacia", agents: 5, reqs: 410, uptime: 99.98, fte: 0.8, eps: 7,
+    robots: [
+      { name: "Leitor de Petições 001", model: "Claude 3.5 Sonnet", baseTasks: 2100, baseRoi: 16500 }
+    ]
+  },
+  {
+    id: 6, name: "Vanguard Construtora", agents: 14, reqs: 1890, uptime: 99.94, fte: 0.78, eps: 20,
+    robots: [
+      { name: "Agente de Compras 001", model: "Gemini 1.5 Flash", baseTasks: 9450, baseRoi: 32000 }
+    ]
+  },
+  {
+    id: 7, name: "Apex E-commerce", agents: 22, reqs: 3120, uptime: 99.98, fte: 0.72, eps: 45,
+    robots: [
+      { name: "Recuperador de Carrinho 001", model: "Claude 3.5 Sonnet", baseTasks: 15400, baseRoi: 48000 }
+    ]
+  },
+  {
+    id: 8, name: "MedPrime Clínicas", agents: 6, reqs: 720, uptime: 100.0, fte: 0.8, eps: 9,
+    robots: [
+      { name: "Agendador de Consultas 001", model: "Claude 3.5 Sonnet", baseTasks: 3600, baseRoi: 19500 }
+    ]
+  },
+  { 
+    id: 9, name: "Contabiliza Descomplica", agents: 6, reqs: 480, uptime: 99.91, fte: 0.7, eps: 8,
     robots: [
       { name: "Triagem de Tickets 001", model: "Gemini 1.5 Flash", baseTasks: 8900, baseRoi: 5800 }
     ]
   },
   { 
-    id: 5, name: "Paineira Contabilidade", agents: 4, reqs: 310, uptime: 100.0, fte: 0.8,
-    eps: 5,
+    id: 10, name: "Paineira Contabilidade", agents: 4, reqs: 310, uptime: 100.0, fte: 0.8, eps: 5,
     robots: [
       { name: "Lançamento de Contas 001", model: "Llama 3 70B", baseTasks: 3100, baseRoi: 4100 }
     ]
   },
-  { 
-    id: 6, name: "Zac Contábil", agents: 10, reqs: 1150, uptime: 99.99, fte: 0.75,
-    eps: 18,
+  {
+    id: 11, name: "Dr. Saúde Laboratório", agents: 12, reqs: 2150, uptime: 99.97, fte: 0.82, eps: 32,
     robots: [
-      { name: "Agendador Cal.com 001", model: "Claude 3.5 Sonnet", baseTasks: 1250, baseRoi: 6200 },
-      { name: "Envio de Boleto WhatsApp 002", model: "Gemini 1.5 Flash", baseTasks: 9400, baseRoi: 11000 }
+      { name: "Entrega de Laudos 001", model: "Gemini 1.5 Flash", baseTasks: 21500, baseRoi: 24500 }
+    ]
+  },
+  {
+    id: 12, name: "Belo Foco Estética", agents: 3, reqs: 290, uptime: 99.96, fte: 0.75, eps: 4,
+    robots: [
+      { name: "Instagram SDR 001", model: "Claude 3.5 Sonnet", baseTasks: 1450, baseRoi: 8200 }
+    ]
+  },
+  {
+    id: 13, name: "Alfa Seguros", agents: 18, reqs: 2450, uptime: 99.99, fte: 0.8, eps: 35,
+    robots: [
+      { name: "Renovação Ativa 001", model: "Claude 3.5 Sonnet", baseTasks: 12250, baseRoi: 41200 }
+    ]
+  },
+  {
+    id: 14, name: "Parati Distribuidora", agents: 15, reqs: 1980, uptime: 99.92, fte: 0.77, eps: 24,
+    robots: [
+      { name: "Rastreamento Carga 001", model: "Gemini 1.5 Flash", baseTasks: 9900, baseRoi: 18400 }
+    ]
+  },
+  {
+    id: 15, name: "TechSoluções IT", agents: 8, reqs: 940, uptime: 100.0, fte: 0.8, eps: 14,
+    robots: [
+      { name: "Filtro de Incidentes 001", model: "Llama 3 70B", baseTasks: 4700, baseRoi: 15600 }
     ]
   }
 ];

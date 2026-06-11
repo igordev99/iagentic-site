@@ -30,7 +30,7 @@ img { max-width: 100%; display: block; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
 /* ====== CONTAINER ====== */
-.container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
+.container { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 24px; }
 
 /* ====== BUTTONS ====== */
 .btn-cyan {
@@ -85,6 +85,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .pulse-dot.orange {
     background: var(--orange); box-shadow: 0 0 8px var(--orange);
 }
+.pulse-dot.purple {
+    background: var(--purple); box-shadow: 0 0 8px var(--purple);
+}
 @keyframes dotPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
 
 /* ====== HEADER ====== */
@@ -135,7 +138,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     top: -200px; right: -100px; pointer-events: none; filter: blur(80px);
 }
 .hero-layout {
-    display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center;
+    display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center;
 }
 .hero-inner h1 {
     font-size: 56px; font-weight: 800; line-height: 1.05; letter-spacing: -1.5px;
@@ -153,9 +156,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     background: rgba(10, 10, 10, 0.4); border: 1px solid var(--border);
     border-radius: 16px; padding: 24px; backdrop-filter: blur(20px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
-    display: grid; grid-template-columns: 1fr; gap: 16px;
+    display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px;
     position: relative; z-index: 2;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    min-width: 0;
+    overflow: hidden;
 }
 .dashboard-showcase.fade-out {
     opacity: 0.15;
@@ -166,11 +171,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     transform: scale(1) translateY(0);
 }
 .showcase-grid-row {
-    display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px;
+    display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px;
 }
 .showcase-card {
     background: var(--surface); border: 1px solid var(--border2);
     border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px;
+    min-width: 0;
+    overflow: hidden;
 }
 .showcase-card h4 { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
 .showcase-card-stats { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
@@ -178,7 +185,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     display: flex; justify-content: space-between; font-size: 12px; color: var(--muted);
 }
 .showcase-stat-item span:last-child { color: var(--white); font-weight: 600; font-family: var(--font-mono); }
-.status-indicator { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: var(--cyan); }
+.status-indicator { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: var(--cyan); transition: color 0.4s var(--ease); }
+.status-indicator.initializing { color: var(--orange); }
+.status-indicator.running { color: var(--cyan); }
+.status-indicator.completed { color: var(--purple); }
 
 /* SVG Live Graph */
 .showcase-graph-container {
@@ -187,7 +197,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .showcase-graph-line {
     stroke: var(--cyan); stroke-width: 2; fill: none;
     stroke-dasharray: 400; stroke-dashoffset: 0;
+    transition: stroke 0.5s var(--ease), d 0.5s var(--ease);
 }
+.showcase-graph-line.initializing { stroke: var(--orange); }
+.showcase-graph-line.running { stroke: var(--cyan); }
+.showcase-graph-line.completed { stroke: var(--purple); }
 
 @media (max-width: 992px) {
     .hero-layout { grid-template-columns: 1fr; gap: 48px; }

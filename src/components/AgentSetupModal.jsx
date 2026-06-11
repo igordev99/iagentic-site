@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
 
+const formatCPFOrCNPJ = (value) => {
+  const v = value.replace(/\D/g, '').slice(0, 14);
+  if (v.length <= 11) {
+    if (v.length <= 3) return v;
+    if (v.length <= 6) return `${v.slice(0, 3)}.${v.slice(3)}`;
+    if (v.length <= 9) return `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6)}`;
+    return `${v.slice(0, 3)}.${v.slice(3, 6)}.${v.slice(6, 9)}-${v.slice(9)}`;
+  } else {
+    if (v.length <= 12) {
+      return `${v.slice(0, 2)}.${v.slice(2, 5)}.${v.slice(5, 8)}/${v.slice(8)}`;
+    }
+    return `${v.slice(0, 2)}.${v.slice(2, 5)}.${v.slice(5, 8)}/${v.slice(8, 12)}-${v.slice(12)}`;
+  }
+};
+
 export default function AgentSetupModal({ isOpen, onClose }) {
   const [step, setStep] = useState(1);
   const [scope, setScope] = useState('atendimento'); // 'atendimento' | 'sdr' | 'vendas'
@@ -231,7 +246,7 @@ export default function AgentSetupModal({ isOpen, onClose }) {
                     type="text" 
                     placeholder="00.000.000/0001-00" 
                     value={taxId} 
-                    onChange={(e) => setTaxId(e.target.value)} 
+                    onChange={(e) => setTaxId(formatCPFOrCNPJ(e.target.value))} 
                     required 
                   />
                 </div>

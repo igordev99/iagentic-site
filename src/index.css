@@ -510,6 +510,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
     border-color: var(--cyan); background: var(--surface2);
 }
+.form-group select option,
+select option {
+    background-color: #090909;
+    color: var(--white);
+}
 .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.25); }
 .contact-direct-info { text-align: center; margin-top: 24px; font-size: 13px; color: var(--muted); }
 .contact-direct-info a { color: var(--cyan); font-weight: 600; }
@@ -969,4 +974,51 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     .mcp-diagram {
         height: 240px;
     }
+}
+
+/* ====== MCP DIAGRAM HIGH-TECH ANIMATIONS ====== */
+.mcp-pulse-line {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-dasharray: 12 70;
+    stroke-linecap: round;
+    animation: mcpFlow 2s linear infinite;
+}
+.mcp-pulse-line.sat-1-pulse { stroke: var(--cyan); animation-duration: 2.2s; }
+.mcp-pulse-line.sat-2-pulse { stroke: var(--purple); animation-duration: 1.8s; }
+.mcp-pulse-line.sat-3-pulse { stroke: var(--white); animation-duration: 3s; }
+.mcp-pulse-line.sat-4-pulse { stroke: var(--white); animation-duration: 2.5s; }
+
+@keyframes mcpFlow {
+    from { stroke-dashoffset: 82; }
+    to { stroke-dashoffset: 0; }
+}
+
+.mcp-diagram-satellite.sat-1 { animation: floatSat1 6s ease-in-out infinite; }
+.mcp-diagram-satellite.sat-2 { animation: floatSat2 7s ease-in-out infinite; }
+.mcp-diagram-satellite.sat-3 { animation: floatSat3 6.5s ease-in-out infinite; }
+.mcp-diagram-satellite.sat-4 { animation: floatSat4 7.5s ease-in-out infinite; }
+
+.mcp-diagram-satellite:hover {
+    border-color: var(--white);
+    animation-play-state: paused;
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes floatSat1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+@keyframes floatSat2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+@keyframes floatSat3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+@keyframes floatSat4 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
 }

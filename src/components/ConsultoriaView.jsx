@@ -108,12 +108,27 @@ export default function ConsultoriaView({ setSetupOpen }) {
             Nossos engenheiros constroem chaves de conexão customizadas utilizando a arquitetura <strong>MCP (Model Context Protocol)</strong>. Isso permite que a Charlotte leia bancos de dados SQL, cadastre novos negócios de forma ativa no CRM e responda clientes no WhatsApp no mesmo segundo.
           </p>
         </div>
-        <div className="mcp-diagram" style={{ background: 'var(--surface)' }}>
-          <div className="mcp-diagram-core">Charlotte</div>
-          <div className="mcp-diagram-satellite sat-1" style={{ color: 'var(--cyan)' }}>WhatsApp</div>
-          <div className="mcp-diagram-satellite sat-2" style={{ color: 'var(--purple)' }}>Hubspot</div>
-          <div className="mcp-diagram-satellite sat-3">PostgreSQL</div>
-          <div className="mcp-diagram-satellite sat-4">SMTP Server</div>
+        <div className="mcp-diagram" style={{ background: 'var(--surface)', position: 'relative' }}>
+          {/* Glowing Animated SVG Connectors */}
+          <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 1 }}>
+            {/* Background connection paths */}
+            <line x1="50%" y1="50%" x2="15%" y2="20%" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" strokeDasharray="4 4" />
+            <line x1="50%" y1="50%" x2="85%" y2="20%" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" strokeDasharray="4 4" />
+            <line x1="50%" y1="50%" x2="15%" y2="80%" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" strokeDasharray="4 4" />
+            <line x1="50%" y1="50%" x2="85%" y2="80%" stroke="rgba(255,255,255,0.06)" strokeWidth="1.5" strokeDasharray="4 4" />
+
+            {/* Glowing active flow pulses */}
+            <line className="mcp-pulse-line sat-1-pulse" x1="50%" y1="50%" x2="15%" y2="20%" />
+            <line className="mcp-pulse-line sat-2-pulse" x1="50%" y1="50%" x2="85%" y2="20%" />
+            <line className="mcp-pulse-line sat-3-pulse" x1="50%" y1="50%" x2="15%" y2="80%" />
+            <line className="mcp-pulse-line sat-4-pulse" x1="50%" y1="50%" x2="85%" y2="80%" />
+          </svg>
+
+          <div className="mcp-diagram-core" style={{ zIndex: 2 }}>Charlotte</div>
+          <div className="mcp-diagram-satellite sat-1" style={{ color: 'var(--cyan)', zIndex: 2 }}>WhatsApp</div>
+          <div className="mcp-diagram-satellite sat-2" style={{ color: 'var(--purple)', zIndex: 2 }}>Hubspot</div>
+          <div className="mcp-diagram-satellite sat-3" style={{ zIndex: 2 }}>PostgreSQL</div>
+          <div className="mcp-diagram-satellite sat-4" style={{ zIndex: 2 }}>SMTP Server</div>
         </div>
       </div>
 

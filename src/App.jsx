@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import TelemetryBar from './components/TelemetryBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Partners from './components/Partners';
@@ -83,7 +82,6 @@ export default function App() {
 
   return (
     <>
-      <TelemetryBar />
       <Navbar currentView={view} navigateTo={navigateTo} setLoginOpen={setLoginOpen} />
 
       {/* Main View Switcher */}

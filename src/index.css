@@ -743,12 +743,13 @@ select option {
     display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0;
     color: var(--muted);
 }
-.faq-plus { margin-left: auto; font-size: 16px; transition: 0.3s var(--ease); color: var(--muted); }
+.faq-plus { display: inline-block; margin-left: auto; font-size: 16px; transition: 0.3s var(--ease); color: var(--muted); }
 .faq-item.open .faq-plus { transform: rotate(45deg); color: var(--white); }
 .faq-a {
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.3s var(--ease);
+    overflow: hidden;
 }
 .faq-item.open .faq-a {
     grid-template-rows: 1fr;
@@ -756,7 +757,14 @@ select option {
 .faq-a-content {
     overflow: hidden;
     min-height: 0;
-    padding: 0 20px 16px 64px; color: var(--muted); font-size: 13px; line-height: 1.6;
+    padding: 0 20px 0 64px; color: var(--muted); font-size: 13px; line-height: 1.6;
+    transition: padding-bottom 0.3s var(--ease);
+}
+.faq-item.open .faq-a-content {
+    padding-bottom: 16px;
+}
+.faq-a-content p {
+    margin: 0;
 }
 
 /* ====== CTA ====== */
